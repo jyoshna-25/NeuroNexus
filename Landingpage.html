@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e3f2fd; /* Light blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #ffffff; /* White form background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #42a5f5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #1e88e5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="contact">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department">
+                <option value="HR">HR</option>
+                <option value="Sales">Sales</option>
+                <option value="Development">Development</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Others">Others</option>
+            </select>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="prefer-not" name="gender" value="Prefer not to say">
+                <label for="prefer-not">Prefer not to say</label>
+            </div>
+
+            <button type="submit" class="submit-button">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
